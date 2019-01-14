@@ -26,7 +26,7 @@ Declare an app manifest with a manifest.json file
 The web app manifest is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the mobile home screen), direct what the user can launch and more importantly how they can launch it.
 
 Add to Homescreen elements for Safari on iOS
-In your index.html, add the following to the bottom of the <head> element:
+In your index.html, add the following to the bottom of the ```<head>``` element:
 
 ```
   <!-- Add to home screen for Safari on iOS -->
@@ -37,7 +37,7 @@ In your index.html, add the following to the bottom of the <head> element:
 ```
 
 Tile Icon for Windows
-In your index.html, add the following to the bottom of the <head> element:
+In your index.html, add the following to the bottom of the ``<head>`` element:
 
 ```
   <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
