@@ -1,6 +1,9 @@
 var dataCacheName = 'template-pwa';
 var cacheName = 'template-pwa';
 var filesToCache = [
+  // Uncomment the block below when you are ready to cache files. Feel free to add any other files that
+  // you wish to cache. Be warned that caching files requires that you clear the cache after making updates.
+  /*
   '/',
  "./fonts",
  "./fonts/roboto",
@@ -31,6 +34,7 @@ var filesToCache = [
  "./styles",
  "./styles/materialize.css",
  "./styles/style.css"
+ */
 ];
 
 self.addEventListener('install', function(e) {
