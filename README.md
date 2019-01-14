@@ -12,41 +12,35 @@ To give an example of what you could create, here is an example of a web app. It
 
 ## The Basics
 
-In most ways, progressive web apps are created in the same way as a typical website. The foundation and text are built using HTML, styling is done with CSS, and functionality is added with JavaScript.
+In most ways, progressive web apps are created in the same way as a typical website. The foundation and text are built using HTML, styling is done with CSS, and functionality is added with JavaScript. In this tutorial, the principal components discussed below have already been added to the provided template, but they are important to understand.
 
-The app's shell is the minimal HTML, CSS, and JavaScript that is required to power the user interface of a progressive web app and is one of the components that ensures reliably good performance. Its first load should be extremely quick and immediately cached. "Cached" means that the shell files are loaded once over the network and then saved to the local device. Every subsequent time that the user opens the app, the shell files are loaded from the local device's cache, which results in blazing-fast startup times.
+### Caching
 
-App shell architecture separates the core application infrastructure and UI from the data. All of the UI and infrastructure is cached locally using a service worker so that on subsequent loads, the Progressive Web App only needs to retrieve the necessary data, instead of having to load everything.
+For progressive web apps, it is important that files are cached to enable offline functionality. "Cached" means that the shell files are loaded once over the network and then saved to the local device. Every subsequent time that the user opens the app, the shell files are loaded from the local device's cache, which results in faster startup times and enables offline mode.
 
-A service worker is a script that your browser runs in the background, separate from a web page, opening the door to features that don't need a web page or user interaction.
+Progressive web apps use service workers to cache files. A service worker is a script that your browser runs in the background, separate from a web page, opening the door to features that don't need a web page or user interaction. For this tutorial, our service worker will NOT cache files because this allows us to make changes to our app without needing to constantly clear the cache.
 
+### App Manifest
 
-Declare an app manifest with a manifest.json file
+App manifests are declared with a manifest.json file. The web app manifest is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the mobile home screen), direct what the user can launch and more importantly how they can launch it.
 
-The web app manifest is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the mobile home screen), direct what the user can launch and more importantly how they can launch it.
+### IOS and Windows
 
-Add to Homescreen elements for Safari on iOS
-In your index.html, add the following to the bottom of the ```<head>``` element:
-
+In order for the app to function properly on IOS and Windows, the following lines were added to index.html.
 ```
   <!-- Add to home screen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Weather PWA">
   <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
-```
-
-Tile Icon for Windows
-In your index.html, add the following to the bottom of the ``<head>`` element:
-
-```
+  <!-- Tile Icon for Windows -->
   <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
   <meta name="msapplication-TileColor" content="#2F3BA2">
 ```
 
 ## Create your app
 
-Clone this repo (or just copy the bits you need). The main files to edit are:  
+First, clone this repo. The main files to edit are: 
 
 - [public/index.html](public/index.html) The main page for your app
 - [public/style/style.css)](public/style/style.css) Add your own styling to this file
