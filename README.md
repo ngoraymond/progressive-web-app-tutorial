@@ -85,9 +85,9 @@ Once your account has been created and you've signed in, you're ready to deploy!
 
 ## Afterwards
 
-Try personalizing the app a little bit. For example, you can navigate to index.html and replace "Your message" with "[Your name]'s message." Then, deploy the project again to try it out!
+Try playing around and personalizing the app a little bit. For example, you can navigate to index.html and replace "Your message" with "[Your name]'s message." Then, deploy the project again to try it out!
 
-Feel free to use this repo as your template for any future creation!
+Feel free to use this repo as your template for any future creations!
 
 I recommend that you modify the following files:
 
