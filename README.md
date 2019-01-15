@@ -87,19 +87,23 @@ Once your account has been created and you've signed in, you're ready to deploy!
 
 Try playing around and personalizing the app a little bit. For example, you can navigate to index.html and replace "Your message" with "[Your name]'s message." Then, deploy the project again to try it out!
 
+When you feel you are ready to enable caching, navigate to public/service-worker.js and uncomment the block of code within the variable filesToCache. Once you enable caching, you will need to delete the browser cache within settings every time you make changes to your app.
+
 Feel free to use this repo as your template for any future creations!
 
-I recommend that you modify the following files:
+Note that many of the concepts used for PWAs (HTML, CSS, JS) are the same as those used for developing webpages. I recommend learning from other tutorials on web development if you are not familiar with these concepts.
+
+If you wish to learn more about the unique capabilities of PWAs, I recommend the following tutorial: [Your First Progressive Web App - Google Developers](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/)
+
+## What's included
+
+The following files can and should be modified:
 
 - [public/index.html](public/index.html) The main page for your app
 - [public/style/style.css)](public/style/style.css) Add your own styling to this file
 - [public/scripts/app.js](public/scripts/app.js) This contains the javascript to handle the logic in your app. It currently uses localStorage for storing data when the use clicks the button, it is recommended to use another database in production, such as indexedDb (Read more [here](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/#intercept_the_network_request_and_cache_the_response))
 - [images/icons](images/icons) Create square icons of the number of pixels for each size and save them here
 - [public/service-worker.js](public/service-worker.js) Update this with the list of files you want to cache locally
-
-Learn more about the unique functionality of PWAs through the following Google tutorial: [Your First Progressive Web App - Google Developers](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/)
-
-## What's included
 
 ```
 ├── README.md
