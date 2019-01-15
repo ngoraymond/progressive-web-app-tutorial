@@ -2,7 +2,7 @@
 
 In this tutorial, I’ll show you how to add your HTML, Javascript, and styling to this template to create an app that works online, offline, in a browser, and as a mobile app
 
-Progressive web apps are a hybrid of a website and an app that you might use on a tablet or mobile. Making one has a lot in common with creating a website, but with a few key extra files and concepts involved. It need not take a week of trial and error or trawling through a tutorial to get one up and running.
+Progressive web apps (or PWAs) are a hybrid of a website and an app that you might use on a tablet or mobile. Making one has a lot in common with creating a website, but with a few key extra files and concepts involved. It need not take a week of trial and error or trawling through a tutorial to get one up and running.
 
 This post will show you how to make one in an hour that you can then host, use online as a website, and use offline and as a mobile app.
 
@@ -40,7 +40,7 @@ In order for the app to function properly on IOS and Windows, the following line
 
 ## Create your app
 
-First, clone this repo. The main files to edit are: 
+First, clone this repo. The main files are:
 
 - [public/index.html](public/index.html) The main page for your app
 - [public/style/style.css)](public/style/style.css) Add your own styling to this file
@@ -50,26 +50,54 @@ First, clone this repo. The main files to edit are:
 
 <img src="images/template-progressive-web-app.png" width="400" border="3" style="border-radius: 10px;">
 
+## Test out the sample app by deploying to Firebase
 
+If you're new to Firebase, you'll need to create your account and install some tools first.
 
+- Create a Firebase account at https://firebase.google.com/console/. Note: Use your personal email because school emails will not work!
+- If you do not already have Node.js and npm installed, install them from https://www.npmjs.com/get-npm
+- Install the Firebase tools via npm by typing the following into the command line: npm install -g firebase-tools
 
+Once your account has been created and you've signed in, you're ready to deploy!
+- Create a new app at https://firebase.google.com/console/
+- Update your credentials: firebase login
+- Add your project by typing "firebase use --add" and select your project from the list. Proceed with the instructions shown.
+- Finally, deploy the app to Firebase: firebase deploy
+- Celebrate. You're done! Your app will be deployed to the domain: https://YOUR-FIREBASE-APP.firebaseapp.com
 
+[More instructions for deploying to firebase](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/#deploy_to_firebase)
 
+## Launch the app on your mobile device
 
+### IOS
 
+- Navigate to your app's domain using Safari
+- Tap the Share button at the bottom
+- Tap the icon labeled Add to Home Screen.
+- Name the app and tap Add in the upper-right corner
+- Your app should now be on your home screen
 
+### Android
 
+- Navigate to your app's domain using Chrome or any other browser: 
+- After some time, a notification should pop up with a "+Add to Home Screen" message
+- Click it and your app should now be on your home screen
 
+## Afterwards
 
+Try personalizing the app a little bit. For example, you can navigate to index.html and replace "Your message" with "[Your name]'s message." Then, deploy the project again to try it out!
 
+Feel free to use this repo as your template for any future creation!
 
+I recommend that you modify the following files:
 
+- [public/index.html](public/index.html) The main page for your app
+- [public/style/style.css)](public/style/style.css) Add your own styling to this file
+- [public/scripts/app.js](public/scripts/app.js) This contains the javascript to handle the logic in your app. It currently uses localStorage for storing data when the use clicks the button, it is recommended to use another database in production, such as indexedDb (Read more [here](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/#intercept_the_network_request_and_cache_the_response))
+- [images/icons](images/icons) Create square icons of the number of pixels for each size and save them here
+- [public/service-worker.js](public/service-worker.js) Update this with the list of files you want to cache locally
 
-## Using the app
-
-- Open `index.html` within the public folder
-- Install a service worker for your browser, if you haven't already (eg [Web Server for Chrome](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/#install_and_verify_web_server))
-- Browsers may also ask if you want to include the app on your homescreen
+Learn more about the unique functionality of PWAs through the following Google tutorial: [Your First Progressive Web App - Google Developers](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/)
 
 ## What's included
 
@@ -100,15 +128,6 @@ First, clone this repo. The main files to edit are:
 - [public/service-worker.js](public/service-worker.js) Currently this will cache the app's files for quick local access. Read more about Service Workers [here](https://developers.google.com/web/fundamentals/primers/service-workers/).
 - [public/manifest.json](public/manifest.json) A JSON file specifies how your app appears to the user in the areas that they would expect to see apps (for example the mobile home screen), direct what the user can launch and more importantly how they can launch it. Read more about this [here](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/#support_native_integration).
 
-## Hosting
-
-- Sign up to firebase  
-- Download and install the firebase CLI tools  
-- Within your project folder:
-  - `firebase init`
-  - `firebase deploy`
-
-[More instructions for deploying to firebase](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/#deploy_to_firebase)
 
 ## Examples
 
