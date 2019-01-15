@@ -26,7 +26,7 @@ App manifests are declared with a manifest.json file. The web app manifest is a 
 
 ### IOS and Windows
 
-In order for the app to function properly on IOS and Windows, the following lines were added to index.html.
+In order for the app to function properly on IOS and Windows, the following lines had been added to index.html.
 ```
   <!-- Add to home screen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
