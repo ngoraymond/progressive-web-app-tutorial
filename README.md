@@ -85,7 +85,7 @@ Once your account has been created and you've signed in, you're ready to deploy!
 
 ## Afterwards
 
-Try playing around and personalizing the app a little bit. For example, you can navigate to index.html and replace "Your message" with "[Your name]'s message." Then, deploy the project again to try it out!
+Try playing around and personalizing the app a little bit. For example, you can navigate to index.html and replace "Your message" with "[Your name]'s message." Then, deploy the project again to try it out! If anything fails to update, try clearing the browser data through settings.
 
 When you feel you are ready to enable caching, navigate to public/service-worker.js and uncomment the block of code within the variable filesToCache. Once you enable caching, you will need to delete the browser cache within settings every time you make changes to your app.
 
