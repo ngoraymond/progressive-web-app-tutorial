@@ -1,10 +1,10 @@
 ## Introduction
 
-In this tutorial, I’ll show you how to add your HTML, Javascript, and styling to this template to create an app that works online, offline, in a browser, and as a mobile app
+In this tutorial, I’ll show you how to add your HTML, Javascript, and styling to this template to create an app that works online, offline, in a browser, and as a mobile app.
 
-Progressive web apps (or PWAs) are a hybrid of a website and an app that you might use on a tablet or mobile. Making one has a lot in common with creating a website, but with a few key extra files and concepts involved. It need not take a week of trial and error or trawling through a tutorial to get one up and running.
+Progressive web apps (or PWAs) are a hybrid of a website and an app that you might use on a tablet or mobile. Making one has a lot in common with creating a website, but with a few key extra files and concepts involved.
 
-This post will show you how to make one in an hour that you can then host, use online as a website, and use offline and as a mobile app.
+This post will show you how to make one that you can then host, use online as a website, and use offline and as a mobile app.
 
 To give an example of what you could create, here is an example of a web app. It generates a QR code from the text you enter.
 
@@ -24,9 +24,26 @@ Progressive web apps use service workers to cache files. A service worker is a s
 
 App manifests are declared with a manifest.json file. The web app manifest is a simple JSON file that gives you, the developer, the ability to control how your app appears to the user in the areas that they would expect to see apps (for example the mobile home screen), direct what the user can launch and more importantly how they can launch it.
 
-### IOS and Windows
+### Overview of the repository
 
-In order for the app to function properly on IOS and Windows, the following lines had been added to index.html.
+The main files are:
+
+- [public/index.html](public/index.html) The main page for your app
+- [public/style/style.css)](public/style/style.css) Add your own styling to this file
+- [public/scripts/app.js](public/scripts/app.js) This contains the javascript to handle the logic in your app. It currently uses localStorage for storing data when the use clicks the button, it is recommended to use another database in production, such as indexedDb (Read more [here](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/#intercept_the_network_request_and_cache_the_response))
+- [images/icons](images/icons) Create square icons of the number of pixels for each size and save them here
+- [public/service-worker.js](public/service-worker.js) Update this with the list of files you want to cache locally
+
+### Default appearance of the app
+
+<img src="images/template-progressive-web-app.png" width="400" border="3" style="border-radius: 10px;">
+
+## Create your app
+
+First, clone this repository. Then open it in a code editor.
+
+In order for the app to function properly on IOS and Windows, a few lines will need to be added index.html. Copy and paste the follwing code snippet where it says ``` <!-- Add to home screen for Safari on iOS --> ``` and ```<!-- Tile Icon for Windows -->```
+
 ```
   <!-- Add to home screen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -38,17 +55,11 @@ In order for the app to function properly on IOS and Windows, the following line
   <meta name="msapplication-TileColor" content="#2F3BA2">
 ```
 
-## Create your app
+Then, navigate to index.html and replace "Your message" with "[Your name]'s message." Ex: "Richard's message".
 
-First, clone this repo. The main files are:
+Now, you're ready to deploy your app!
 
-- [public/index.html](public/index.html) The main page for your app
-- [public/style/style.css)](public/style/style.css) Add your own styling to this file
-- [public/scripts/app.js](public/scripts/app.js) This contains the javascript to handle the logic in your app. It currently uses localStorage for storing data when the use clicks the button, it is recommended to use another database in production, such as indexedDb (Read more [here](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/#intercept_the_network_request_and_cache_the_response))
-- [images/icons](images/icons) Create square icons of the number of pixels for each size and save them here
-- [public/service-worker.js](public/service-worker.js) Update this with the list of files you want to cache locally
-
-<img src="images/template-progressive-web-app.png" width="400" border="3" style="border-radius: 10px;">
+## 
 
 ## Test out the sample app by deploying to Firebase
 
@@ -85,7 +96,7 @@ Once your account has been created and you've signed in, you're ready to deploy!
 
 ## Afterwards
 
-Try playing around and personalizing the app a little bit. For example, you can navigate to index.html and replace "Your message" with "[Your name]'s message." Then, deploy the project again to try it out! If anything fails to update, try clearing the browser data through settings.
+Try playing around and personalizing the app a little bit. Then, deploy the project again to try it out! If anything fails to update, try clearing the browser data through settings.
 
 When you feel you are ready to enable caching, navigate to public/service-worker.js and uncomment the block of code within the variable filesToCache. Once you enable caching, you will need to delete the browser cache within settings every time you make changes to your app.
 
