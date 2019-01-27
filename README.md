@@ -42,6 +42,8 @@ The main files are:
 
 First, clone this repository. Then open it in a code editor.
 
+### Required lines for iOS and Windows
+
 In order for the app to function properly on IOS and Windows, a few lines will need to be added index.html. Copy and paste the follwing code snippet into where it says ``` <!-- Add to home screen for Safari on iOS --> ``` and ```<!-- Tile Icon for Windows -->``` in the file index.html.
 
 ```
@@ -55,13 +57,13 @@ In order for the app to function properly on IOS and Windows, a few lines will n
   <meta name="msapplication-TileColor" content="#2F3BA2">
 ```
 
+### Personalize your app
+
 Then, navigate to index.html and find ```<span class="card-title">Your message</span>```.
-Replace "Your message" with "[Your name]'s message." Ex: "Richard's message".
-```<span class="card-title">Richard's message</span>```
+Replace "Your message" with "[Your name]'s message." 
+Ex: ```<span class="card-title">Richard's message</span>```
 
 Now, you're ready to deploy your app!
-
-## 
 
 ## Test out the sample app by deploying to Firebase
 
