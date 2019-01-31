@@ -94,9 +94,10 @@ Once your account has been created and you've signed in, you're ready to deploy!
 
 ### Android
 
-- Navigate to your app's domain using Chrome or any other browser: 
-- After some time, a notification should pop up with a "+Add to Home Screen" message
-- Click it and your app should now be on your home screen
+- Navigate to your app's domain using Chrome
+- Tap the 3-dots menu icon at the top right corner
+- Tap on "Add to Home Screen"
+- Your app should now be on your home screen.
 
 ## Afterwards
 
