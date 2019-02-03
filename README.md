@@ -75,9 +75,11 @@ If you're new to Firebase, you'll need to create your account and install some t
 
 Once your account has been created and you've signed in, you're ready to deploy!
 - Create a new app at https://firebase.google.com/console/
-- Update your credentials: firebase login
+- Go into command line and navigate to your project folder
+- Update your credentials by typing: "firebase login"
+- Initiate your project by typing "firebase init" and select the "Hosting" service.
 - Add your project by typing "firebase use --add" and select your project from the list. Proceed with the instructions shown.
-- Finally, deploy the app to Firebase: firebase deploy
+- Finally, deploy the app to Firebase: "firebase deploy"
 - Celebrate. You're done! Your app will be deployed to the domain: https://YOUR-FIREBASE-APP.firebaseapp.com
 
 [More instructions for deploying to firebase](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/#deploy_to_firebase)
